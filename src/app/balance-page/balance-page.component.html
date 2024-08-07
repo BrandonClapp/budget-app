@@ -1,9 +1,11 @@
 <div class="page-container">
-    <div class="card-list">
-        <app-balance-card [title]="'Card #1'"></app-balance-card>
-        <app-balance-card [title]="'Card #2'"></app-balance-card>
-        <app-balance-card [title]="'Card #3'"></app-balance-card>
-    </div>
+  <div class="card-list">
+    <app-balance-card
+      *ngFor="let item of payments"
+      [title]="item.title"
+      [amount]="item.amount"
+      [date]="item.date"
+      [paymentType]="item.paymentType"
+      ></app-balance-card>
+  </div>
 </div>
-
-

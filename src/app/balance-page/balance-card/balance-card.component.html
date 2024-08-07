@@ -1,12 +1,17 @@
 <card>
-    <div class="balance-card">
-        <div>
-            <h2 class="balance-card__title">{{ title }}</h2>
-            <p>08/06/2024</p>
-        </div>
-        <div class="balance-card__right-half">
-            <div class="balance-card__right-half__amount">$1000</div>
-            <div>More</div>
-        </div>
+  <div class="balance-card">
+    <div>
+      <h2 class="balance-card__title">{{ title }}</h2>
+      <p>{{ date | date : "MM/dd/yyyy" }}</p>
     </div>
+    <div class="balance-card__right-half">
+      <div
+        class="balance-card__right-half__amount"
+        [ngClass]="{ withdrawal: isWithdrawal, deposit: isDeposit }"
+      >
+        <span *ngIf="isWithdrawal">- </span><span *ngIf="isDeposit">+ </span>${{ amount }}
+      </div>
+      <div>More</div>
+    </div>
+  </div>
 </card>
