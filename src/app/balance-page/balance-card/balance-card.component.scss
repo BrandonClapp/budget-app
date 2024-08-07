@@ -1,0 +1,22 @@
+.balance-card {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    .balance-card__title {
+        margin-bottom: 16px;
+    }
+
+    .balance-card__right-half {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-end;
+
+        .balance-card__right-half__amount {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+    }
+}
